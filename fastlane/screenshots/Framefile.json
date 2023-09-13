@@ -1,0 +1,15 @@
+{
+    "device_frame_version": "latest",
+    "default": {
+        "title": {
+            "font": "fonts/Chalkduster.ttf",
+            "color": "#545454"
+        },
+        "background": "background.jpg",
+        "padding": 50,
+        "show_complete_frame": true,
+        "title_below_image": true,
+        "use_platform": "IOS"
+    },
+    "data": []
+}

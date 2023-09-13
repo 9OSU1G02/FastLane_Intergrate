@@ -21,7 +21,71 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane ios register_app
 ```
 
-Description of what the lane does
+Register new app in App Store Connect
+
+### ios sandbox
+
+```sh
+[bundle exec] fastlane ios sandbox
+```
+
+Sigh all development certificates
+
+### ios get_dev_certs
+
+```sh
+[bundle exec] fastlane ios get_dev_certs
+```
+
+
+
+### ios sync_device_info
+
+```sh
+[bundle exec] fastlane ios sync_device_info
+```
+
+
+
+### ios sync_signing_assets
+
+```sh
+[bundle exec] fastlane ios sync_signing_assets
+```
+
+Sync team Code-Signing assets
+
+### ios build_appstore
+
+```sh
+[bundle exec] fastlane ios build_appstore
+```
+
+Build for App Store submission
+
+### ios build_adhoc
+
+```sh
+[bundle exec] fastlane ios build_adhoc
+```
+
+Build for Ad hoc submission
+
+### ios distribute_to_appstore
+
+```sh
+[bundle exec] fastlane ios distribute_to_appstore
+```
+
+
+
+### ios release
+
+```sh
+[bundle exec] fastlane ios release
+```
+
+
 
 ----
 

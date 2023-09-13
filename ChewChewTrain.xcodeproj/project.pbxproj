@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46790BBB2AB216F8003CB1CC /* FastlaneSnapshotsTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46790BBA2AB216F8003CB1CC /* FastlaneSnapshotsTarget.swift */; };
+		46790BBD2AB216F8003CB1CC /* FastlaneSnapshotsTargetLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46790BBC2AB216F8003CB1CC /* FastlaneSnapshotsTargetLaunchTests.swift */; };
+		46790BC42AB2179D003CB1CC /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46790BC32AB2179D003CB1CC /* SnapshotHelper.swift */; };
 		5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */; };
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
@@ -17,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		46790BBE2AB216F8003CB1CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2A5F1F81F4A9143005CD714 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2A5F1FF1F4A9144005CD714;
+			remoteInfo = ChewChewTrain;
+		};
 		D3E4C001228B6E54009620CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D2A5F1F81F4A9143005CD714 /* Project object */;
@@ -27,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46790BB82AB216F8003CB1CC /* FastlaneSnapshotsTarget.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastlaneSnapshotsTarget.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46790BBA2AB216F8003CB1CC /* FastlaneSnapshotsTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastlaneSnapshotsTarget.swift; sourceTree = "<group>"; };
+		46790BBC2AB216F8003CB1CC /* FastlaneSnapshotsTargetLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastlaneSnapshotsTargetLaunchTests.swift; sourceTree = "<group>"; };
+		46790BC32AB2179D003CB1CC /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* ChewChewTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChewChewTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F2081F4A9144005CD714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +56,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		46790BB52AB216F8003CB1CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2A5F1FD1F4A9144005CD714 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,11 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46790BB92AB216F8003CB1CC /* FastlaneSnapshotsTarget */ = {
+			isa = PBXGroup;
+			children = (
+				46790BBA2AB216F8003CB1CC /* FastlaneSnapshotsTarget.swift */,
+				46790BC32AB2179D003CB1CC /* SnapshotHelper.swift */,
+				46790BBC2AB216F8003CB1CC /* FastlaneSnapshotsTargetLaunchTests.swift */,
+			);
+			path = FastlaneSnapshotsTarget;
+			sourceTree = "<group>";
+		};
 		D2A5F1F71F4A9143005CD714 = {
 			isa = PBXGroup;
 			children = (
 				D2A5F2021F4A9144005CD714 /* ChewChewTrain */,
 				D3E4BFFD228B6E54009620CD /* ChewChewTrainTests */,
+				46790BB92AB216F8003CB1CC /* FastlaneSnapshotsTarget */,
 				D2A5F2011F4A9144005CD714 /* Products */,
 				D32EEDD221D5A5D000B3463C /* Frameworks */,
 			);
@@ -76,6 +108,7 @@
 			children = (
 				D2A5F2001F4A9144005CD714 /* ChewChewTrain.app */,
 				D3E4BFFC228B6E54009620CD /* ChewChewTrainTests.xctest */,
+				46790BB82AB216F8003CB1CC /* FastlaneSnapshotsTarget.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,6 +147,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		46790BB72AB216F8003CB1CC /* FastlaneSnapshotsTarget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46790BC22AB216F8003CB1CC /* Build configuration list for PBXNativeTarget "FastlaneSnapshotsTarget" */;
+			buildPhases = (
+				46790BB42AB216F8003CB1CC /* Sources */,
+				46790BB52AB216F8003CB1CC /* Frameworks */,
+				46790BB62AB216F8003CB1CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46790BBF2AB216F8003CB1CC /* PBXTargetDependency */,
+			);
+			name = FastlaneSnapshotsTarget;
+			productName = FastlaneSnapshotsTarget;
+			productReference = 46790BB82AB216F8003CB1CC /* FastlaneSnapshotsTarget.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D2A5F1FF1F4A9144005CD714 /* ChewChewTrain */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2A5F2121F4A9144005CD714 /* Build configuration list for PBXNativeTarget "ChewChewTrain" */;
@@ -156,10 +207,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = Razeware;
 				TargetAttributes = {
+					46790BB72AB216F8003CB1CC = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = D2A5F1FF1F4A9144005CD714;
+					};
 					D2A5F1FF1F4A9144005CD714 = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = "";
@@ -221,11 +276,19 @@
 			targets = (
 				D2A5F1FF1F4A9144005CD714 /* ChewChewTrain */,
 				D3E4BFFB228B6E54009620CD /* ChewChewTrainTests */,
+				46790BB72AB216F8003CB1CC /* FastlaneSnapshotsTarget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		46790BB62AB216F8003CB1CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2A5F1FE1F4A9144005CD714 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +309,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		46790BB42AB216F8003CB1CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46790BBB2AB216F8003CB1CC /* FastlaneSnapshotsTarget.swift in Sources */,
+				46790BBD2AB216F8003CB1CC /* FastlaneSnapshotsTargetLaunchTests.swift in Sources */,
+				46790BC42AB2179D003CB1CC /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2A5F1FC1F4A9144005CD714 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +340,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		46790BBF2AB216F8003CB1CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2A5F1FF1F4A9144005CD714 /* ChewChewTrain */;
+			targetProxy = 46790BBE2AB216F8003CB1CC /* PBXContainerItemProxy */;
+		};
 		D3E4C002228B6E54009620CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D2A5F1FF1F4A9144005CD714 /* ChewChewTrain */;
@@ -286,6 +364,49 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		46790BC02AB216F8003CB1CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLB4K7V9AN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gosu1902.FastlaneSnapshotsTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChewChewTrain;
+			};
+			name = Debug;
+		};
+		46790BC12AB216F8003CB1CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLB4K7V9AN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gosu1902.FastlaneSnapshotsTarget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChewChewTrain;
+			};
+			name = Release;
+		};
 		D2A5F2101F4A9144005CD714 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -408,16 +529,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/brian/OneDrive/WenderlichWork/Fastlane/ChewChewTrain_dupe//OptimizationProfiles/$(PROJECT_NAME).profdata";
-				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = 3YBJVXRAQH;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = HLB4K7V9AN;
 				INFOPLIST_FILE = ChewChewTrain/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.chewchew;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.9osu1g02.chew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.9osu1g02.chew";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -431,16 +558,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_OPTIMIZATION_PROFILE_FILE = "/Users/brian/OneDrive/WenderlichWork/Fastlane/ChewChewTrain_dupe//OptimizationProfiles/$(PROJECT_NAME).profdata";
-				CURRENT_PROJECT_VERSION = 9;
-				DEVELOPMENT_TEAM = 3YBJVXRAQH;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = HLB4K7V9AN;
 				INFOPLIST_FILE = ChewChewTrain/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.chewchew;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.9osu1g02.chew;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.9osu1g02.chew";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "";
@@ -497,6 +630,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		46790BC22AB216F8003CB1CC /* Build configuration list for PBXNativeTarget "FastlaneSnapshotsTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46790BC02AB216F8003CB1CC /* Debug */,
+				46790BC12AB216F8003CB1CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2A5F1FB1F4A9143005CD714 /* Build configuration list for PBXProject "ChewChewTrain" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -12,10 +12,14 @@
 
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
-
+ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = ENV["APSP"]
 default_platform(:ios)
 
 platform :ios do
+  private_lane :cant_call_from_cli do
+    puts("Hello from private lane")
+  end
+
   desc "Register new app in App Store Connect"
   lane :register_app do
     produce(
@@ -28,4 +32,76 @@ platform :ios do
       itc_team_name: "Truong Van Thanh"
     )
   end
+
+  desc "Sigh all development certificates"
+  lane :sandbox do
+    sigh(
+      username: "iosdev1902@gmail.com",
+      team_id: "HLB4K7V9AN",
+      app_identifier: "com.9osu1g02.chew",
+    )
+  end
+
+  lane :get_dev_certs do
+    cert(
+      development: true
+    )
+    sigh(
+      development: true
+    )
+  end
+
+  lane :sync_device_info do
+    register_devices(
+      devices: {
+      "9OSU1G02 iPhone" => "00008120-001069161E82201E",
+    }
+    )
+  end
+
+  desc "Sync team Code-Signing assets"
+  lane :sync_signing_assets do |optionsss|
+    sync_device_info
+    selectedType = optionsss[:typeee]
+    match(
+      type: selectedType,
+    )
+  end
+
+  desc "Build for App Store submission"
+  lane :build_appstore do
+    sync_signing_assets(typeee: "appstore", dummmmy: true)
+    gym(
+      output_directory: "build_Appstore",
+      export_method: "app-store",
+    )
+    increment_build_number
+  end
+
+  desc "Build for Ad hoc submission"
+  lane :build_adhoc do
+    sync_signing_assets(typeee: "adhoc", dummmmy: true)
+    gym(
+      output_directory: "build_adhoc",
+      export_method: "ad-hoc",
+    )
+  increment_build_number
+  end
+
+  lane :distribute_to_appstore do
+    build_appstore
+    pilot(
+      app_version: "#{lane_context[SharedValues::VERSION_NUMBER]}",
+      build_number: "#{lane_context[SharedValues::BUILD_NUMBER]}",
+    )
+  end
+
+  lane :release do
+    precheck
+    snapshot
+    build_appstore
+    frameit
+    deliver
+  end
+
 end
