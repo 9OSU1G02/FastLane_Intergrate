@@ -103,5 +103,11 @@ platform :ios do
     frameit
     deliver
   end
-
+  lane :gitCheck do
+  #ensure_git_status_clean
+  ensure_git_branch(branch: "main")
+  git_pull
+  git_commit(path: "./fastlane/Fastfile", message: "add gitCheck lane")
+  push_to_git_remote
+  end
 end
