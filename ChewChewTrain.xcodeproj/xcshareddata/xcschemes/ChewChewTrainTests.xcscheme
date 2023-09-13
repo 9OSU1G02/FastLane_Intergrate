@@ -34,6 +34,20 @@
                ReferencedContainer = "container:ChewChewTrain.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "46790BB72AB216F8003CB1CC"
+               BuildableName = "FastlaneSnapshotsTarget.xctest"
+               BlueprintName = "FastlaneSnapshotsTarget"
+               ReferencedContainer = "container:ChewChewTrain.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -100,15 +114,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2A5F1FF1F4A9144005CD714"
-            BuildableName = "ChewChewTrain.app"
-            BlueprintName = "ChewChewTrain"
-            ReferencedContainer = "container:ChewChewTrain.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

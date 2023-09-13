@@ -14,7 +14,9 @@
 # update_fastlane
 ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = ENV["APSP"]
 default_platform(:ios)
-
+before_all do 
+ensure_bundle_exec
+end
 platform :ios do
   private_lane :cant_call_from_cli do
     puts("Hello from private lane")
@@ -103,11 +105,31 @@ platform :ios do
     frameit
     deliver
   end
+
   lane :gitCheck do
   #ensure_git_status_clean
   ensure_git_branch(branch: "main")
   git_pull
-  git_commit(path: "./fastlane/Fastfile", message: "add gitCheck lane")
+  #git_commit(path: "./fastlane/Fastfile", message: "add gitCheck lane")
   push_to_git_remote
   end
+
+  lane :unitTest do
+    scan
+  end
+
+  lane :lint do
+    swiftlint(
+      mode: :autocorrect,
+      config_file: ".swiftlint.yml",
+    )
+  end
+end
+
+error do 
+  puts("Hello from error")
+end
+
+after_all do 
+  puts("Hello from after_all")
 end

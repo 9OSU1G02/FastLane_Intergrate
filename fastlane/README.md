@@ -87,6 +87,30 @@ Build for Ad hoc submission
 
 
 
+### ios gitCheck
+
+```sh
+[bundle exec] fastlane ios gitCheck
+```
+
+
+
+### ios unitTest
+
+```sh
+[bundle exec] fastlane ios unitTest
+```
+
+
+
+### ios lint
+
+```sh
+[bundle exec] fastlane ios lint
+```
+
+
+
 ----
 
 This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
