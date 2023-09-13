@@ -1,0 +1,31 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Register new app in App Store Connect"
+  lane :register_app do
+    produce(
+      username: "iosdev1902@gmail.com",
+      app_identifier: "com.9osu1g02.chew",
+      app_name: "Chew Chew Train 9OSU1G02",
+      team_id: "HLB4K7V9AN",
+      team_name: "Truong Van Thanh",
+      itc_team_id: "HLB4K7V9AN",
+      itc_team_name: "Truong Van Thanh"
+    )
+  end
+end
